@@ -10,10 +10,12 @@ export class RegisterDto{
     
     @IsEmail()
     readonly email: string;
-
+    
     @Transform(({value}) => value.trim())
     @IsString()
     @MinLength(8)
     readonly password: string;
+
+    
 
 }
